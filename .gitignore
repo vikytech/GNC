@@ -55,3 +55,9 @@ Temporary Items
 ### RubyMine ###
 # User-specific stuff:
 .idea
+
+
+## Jekyll
+_site
+.sass-cache
+.jekyll-metadata
