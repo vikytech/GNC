@@ -37,7 +37,7 @@
       align-self: center;
       &-logo {
         height: 70px;
-        background: url(http://www.rainlocal.com/images/rain-direction-icon.png) no-repeat;
+        background: $direction-img no-repeat;
         background-size: 50px;
         background-position: 30px 20px;
       }
