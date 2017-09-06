@@ -1,4 +1,71 @@
-#intro {
+.intro {
   position: relative;
-  top: 50px;
+  top: -50px;
+  display: flex;
+  flex-flow: column;
+  min-height: 800px;
+  text-align: center;
+
+  .banner {
+    flex: 1 1 60%;
+    background: $intro-background center center no-repeat;
+    background-size: 100%;
+    background-color: #b5b935;
+    background-blend-mode: multiply;
+
+    display: flex;
+    justify-content: space-between;
+
+    &-overlay {
+      filter: blur(2px);
+      background-color: white;
+      opacity: 0.5;
+
+      &.left {
+        flex: 0 1 50%;
+      }
+
+      &.right {
+        flex: 0 1 10%;
+      }
+
+    }
+  }
+
+  &-text {
+    flex: 0 1 10%;
+    background-color: $seafoam-blue;
+    font-size: 34px;
+    font-weight: 600;
+    padding: 5% 5% 0 5%;
+  }
+
+  &-registration {
+    flex: 0 1 10%;
+    background-color: $seafoam-blue;
+    display: flex;
+    justify-content: center;
+    &-button {
+      margin: 40px 10px;
+      border-radius: 4px;
+      border: 1px solid transparent;
+      color: $white;
+      width: 300px;
+      height: 60px;
+      cursor: pointer;
+
+      &.participate {
+        background-color: $bluish-green;
+      }
+
+      &.talk {
+        background-color: $rouge;
+      }
+
+      &-sub-text {
+        font-size: 14px;
+        color: $white;
+      }
+    }
+  }
 }

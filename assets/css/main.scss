@@ -1,9 +1,16 @@
 ---
 ---
 
+//Colors
 $pink: #ef5ba1;
-$tw-logo: url({{ "/assets/img/tw-logo.png" | prepend: site.url }});
-$direction-img: url(http://www.rainlocal.com/images/rain-direction-icon.png);
+$white: #FFF;
+$seafoam-blue: #80c9d2;
+$bluish-green: #11aa58;
+$rouge: #b11c54;
+//Images
+$tw-logo: url({{ "/assets/img/tw-logo-white.svg" | prepend: site.url }});
+$direction-img: url({{ "/assets/img/direction.svg" | prepend: site.url }});
+$intro-background: url({{ "/assets/img/intro_background.jpg" | prepend: site.url }});
 
 html {
   width: 100%;

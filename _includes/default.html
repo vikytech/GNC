@@ -1,70 +1,56 @@
-<section id="intro">
-    <div class="row logo">
-        <div class="large-12 columns">
-            <h1>Geek Night Chennai</h1>
-
-            <h6>An open forum for geeks to connect, discuss &amp; learn latest ideas, technologies and trends in
-                software development</h6>
-
-            {% if @item[:subheader] %}
-            <h5 class="subheader">{{ @item[:subheader] }}></h5>
-            {% endif %}
-            {% if @item[:subnote] %}
-            <div class="subnote">{{ @item[:subnote] }}</div>
-            {% endif %}
-        </div>
+<section class="intro">
+    <div class="banner">
+        <div class="banner-overlay left"></div>
+        <div class="banner-overlay right"></div>
     </div>
+    <div class="intro-text">
+        Geek Night Chennai
 
-    <div class="row actions">
-        <div class="large-5 columns participate">
+        An open forum for geeks to connect, discuss &amp; learn latest ideas, technologies and trends in
+        software development <a href="#">Read more</a>
+    </div>
+    <div class="intro-registration">
+        <div class="intro-registration-button participate">
             {% if item[:participate] %}
             <a href="{{ @item[:participate] }}" target="_blank" rel="nofollow"
                onclick="ga('send', 'event', 'participate', 'participate')">
-                <h4>Participate</h4>
+                <div>Participate</div>
             </a>
-            <p>
+            <div class="intro-registration-button-sub-text">
                 to learn exciting new stuff <br/>
                 <small>(and to connect with fellow geeks)</small>
-            </p>
+            </div>
             {% else %}
-            <a href="javascript:void(0)">
-                <h4><strike>Participate</strike></h4>
-            </a>
+            <div><strike>Participate</strike></div>
             {% if start_date.future? %}
-            <p>
-                registrations not yet open <br/>
+            <div class="intro-registration-button-sub-text">
+                registrations not yet open
                 <small>(please check out in a few days)</small>
-            </p>
+            </div>
             {% else %}
-            <p>
+            <div class="intro-registration-button-sub-text">
                 registrations closed <br/>
                 <small>(sorry, but check out next geek night)</small>
-            </p>
+            </div>
             {% endif %}
             {% endif %}
         </div>
-        <div class="large-2 columns participate-or-talk">
-            <hr class="show-for-small"/>
-            <h6 class="hide-for-small delimiter">&laquo; or &raquo;</h6>
-        </div>
-        <div class="large-5 columns talk">
+        <div class="intro-registration-button talk">
             {% if item[:talk] %}
             <a href="{{ @item[:talk] }}" target="_blank" rel="nofollow"
                onclick="ga('send', 'event', 'talk', 'talk')">
-                <h4>Present</h4>
+                <div>Present</div>
             </a>
-            <p>
+            <div class="intro-registration-button-sub-text">
                 to share exciting new stuff <br/>
                 <small>(accepted for this and subsequent geek nights)</small>
-            </p>
+            </div>
             {% else %}
-            <a href="javascript:void(0)">
-                <h4><strike>Present</strike></h4>
-            </a>
-            <p>
+            <div><strike>Present</strike></div>
+            <div class="intro-registration-button-sub-text">
                 presentations not yet open <br/>
                 <small>(please check out in a few days)</small>
-            </p>
+            </div>
             {% endif %}
         </div>
     </div>
