@@ -27,6 +27,20 @@ html {
   }
 }
 
+#toggle {
+  display: none;
+  visibility: hidden;
+}
+
+#expand {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+#toggle:checked ~ #expand {
+  height: 285px;
+}
+
 @import "header";
 @import "intro";
 @import "location";

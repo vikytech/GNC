@@ -1,6 +1,5 @@
 .intro {
   position: relative;
-  top: -50px;
   display: flex;
   flex-flow: column;
   min-height: 800px;
@@ -38,6 +37,20 @@
     font-size: 34px;
     font-weight: 600;
     padding: 5% 5% 0 5%;
+
+    .read-more {
+      color: $pink;
+    }
+
+    .read-more::after {
+      content: "More";
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    #toggle:checked ~ label::after {
+      content: "Less";
+    }
   }
 
   &-registration {
