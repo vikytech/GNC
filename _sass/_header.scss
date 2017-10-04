@@ -1,7 +1,7 @@
 .header {
-  background: $pink;
+  background: $white;
   position: fixed;
-  height: 50px;
+  height: 100px;
   width: 100%;
   left: 0;
   top: 0;
@@ -9,7 +9,7 @@
   z-index: 999;
   a {
     text-decoration: none;
-    color: white;
+    color: $pink;
   }
   .nav-bar {
     width: 960px;
@@ -23,15 +23,16 @@
       display: flex;
       flex: 1 1 50%;
       .logo {
-        background: $tw-logo no-repeat;
+        background: $geeknight-logo no-repeat;
         background-size: 140px;
-        height: 35px;
-        width: 140px;
+        height: 65px;
+        width: 160px;
         margin-left: 5px;
       }
     }
     .menu {
       display: flex;
+      align-items: center;
       flex: 1 1 30%;
       &-item {
         flex: 1 1 20%;

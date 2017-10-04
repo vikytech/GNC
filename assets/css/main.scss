@@ -10,6 +10,7 @@ $bluish-green: #11aa58;
 $rouge: #b11c54;
 //Images
 $tw-logo: url({{ "/assets/img/tw-logo-white.svg" | prepend: site.url }});
+$geeknight-logo: url({{ "/assets/img/geek_night_logo.svg" | prepend: site.url }});
 $direction-img: url({{ "/assets/img/direction.svg" | prepend: site.url }});
 $intro-background: url({{ "/assets/img/intro_background.jpg" | prepend: site.url }});
 
