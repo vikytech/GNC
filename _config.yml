@@ -23,7 +23,7 @@ keep_files:           [".git", ".svn"]
 encoding:             "utf-8"
 strict_front_matter: false
 
-theme: jekyll-theme-slate
+theme: jekyll-theme-minimal
 
 # Outputting
 permalink:  :title
