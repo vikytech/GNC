@@ -1,49 +1,54 @@
 <section class="intro">
     <div class="banner">
         <div class="banner-overlay">
-            <div class="intro-registration">
-                <div class="intro-registration-button participate">
-                    {% if item[:participate] %}
-                    <a href="{{ @item[:participate] }}" target="_blank" rel="nofollow"
-                       onclick="ga('send', 'event', 'participate', 'participate')">
-                        <div>Participate</div>
-                    </a>
-                    <div class="intro-registration-button-sub-text">
-                        to learn exciting new stuff <br/>
-                        <small>(and to connect with fellow geeks)</small>
+            <div class="intro-info">
+                <div class="intro-info-place">CHENNAI</div>
+                <div class="intro-info-edition">Edition 45</div>
+                <div class="intro-info-date">July 27th, 2017</div>
+                <div class="intro-info-buttons">
+                    <div class="intro-info-buttons-button">
+                        {% if item[:participate] %}
+                        <a href="{{ @item[:participate] }}" target="_blank" rel="nofollow"
+                           onclick="ga('send', 'event', 'participate', 'participate')">
+                            <div>Participate</div>
+                        </a>
+                        <div class="intro-registration-button-sub-text">
+                            to learn exciting new stuff <br/>
+                            <small>(and to connect with fellow geeks)</small>
+                        </div>
+                        {% else %}
+                        <div><strike>Participate</strike></div>
+                        {% if start_date.future? %}
+                        <div class="intro-registration-button-sub-text">
+                            registrations not yet open
+                            <small>(please check out in a few days)</small>
+                        </div>
+                        {% else %}
+                        <div class="intro-registration-button-sub-text">
+                            Sorry! registrations closed <br/>
+                            <small>(, but check out next geek night)</small>
+                        </div>
+                        {% endif %}
+                        {% endif %}
                     </div>
-                    {% else %}
-                    <div><strike>Participate</strike></div>
-                    {% if start_date.future? %}
-                    <div class="intro-registration-button-sub-text">
-                        registrations not yet open
-                        <small>(please check out in a few days)</small>
+                    <div class="intro-info-buttons-button">
+                        {% if item[:talk] %}
+                        <a href="{{ @item[:talk] }}" target="_blank" rel="nofollow"
+                           onclick="ga('send', 'event', 'talk', 'talk')">
+                            <div>Present</div>
+                        </a>
+                        <div class="intro-registration-button-sub-text">
+                            to share exciting new stuff <br/>
+                            <small>(accepted for this and subsequent geek nights)</small>
+                        </div>
+                        {% else %}
+                        <div><strike>Present</strike></div>
+                        <div class="intro-registration-button-sub-text">
+                            presentations not yet open <br/>
+                            <small>(please check out in a few days)</small>
+                        </div>
+                        {% endif %}
                     </div>
-                    {% else %}
-                    <div class="intro-registration-button-sub-text">
-                        registrations closed <br/>
-                        <small>(sorry, but check out next geek night)</small>
-                    </div>
-                    {% endif %}
-                    {% endif %}
-                </div>
-                <div class="intro-registration-button talk">
-                    {% if item[:talk] %}
-                    <a href="{{ @item[:talk] }}" target="_blank" rel="nofollow"
-                       onclick="ga('send', 'event', 'talk', 'talk')">
-                        <div>Present</div>
-                    </a>
-                    <div class="intro-registration-button-sub-text">
-                        to share exciting new stuff <br/>
-                        <small>(accepted for this and subsequent geek nights)</small>
-                    </div>
-                    {% else %}
-                    <div><strike>Present</strike></div>
-                    <div class="intro-registration-button-sub-text">
-                        presentations not yet open <br/>
-                        <small>(please check out in a few days)</small>
-                    </div>
-                    {% endif %}
                 </div>
             </div>
         </div>
